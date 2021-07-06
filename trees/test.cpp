@@ -1,15 +1,12 @@
 #include <iostream>
+#include <vector>
 using namespace std;
-void fun(int *p)
-{
-    if ((p) == NULL)
-        cout << "cfe";
-    p = new int;
-    *p = 89;
-}
+
 main()
 {
-    int *p = 0;
-    fun(p);
-    cout << *p;
+    vector<int> a;
+    a.push_back(3);
+    a.push_back(3);
+    for (int i = 0; i < a.size(); i++)
+        cout << a[i];
 }
