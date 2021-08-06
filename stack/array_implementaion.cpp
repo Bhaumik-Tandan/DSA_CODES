@@ -6,7 +6,7 @@ void ins(int n)
 {
     a[t++] = n;
 }
-int pop(int n)
+int pop()
 {
     return a[t--];
 }
@@ -20,5 +20,6 @@ main()
     ins(1);
     ins(2);
     ins(3);
+    pop();
     disp();
 }
