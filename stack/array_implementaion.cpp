@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 int *a = new int[100];
-int t; //t=0
+int t=-1; 
 void ins(int n)
 {
-    a[t++] = n;
+    a[++t] = n;
 }
 int pop()
 {
-    return a[--t];
+    return a[t--];
 }
 int dispt()
 {
-    return a[t-1];
+    return a[t];
 }
 void disp()
 {
-    for (int i = t - 1; i >= 0; i--)
+    for (int i = t ; i >= 0; i--)
         cout << a[i] <<" ";
 }
 void menu()
@@ -47,6 +47,7 @@ void menu()
     }
     menu();
 }
+
 main()
 {
     menu();
