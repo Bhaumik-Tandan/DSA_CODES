@@ -1,4 +1,4 @@
-//insert at bottom of stack using recursion
+// reverse a stack using recursion
 #include <iostream>
 using namespace std;
 int *a = new int[100];
@@ -15,16 +15,22 @@ int dispt()
 {
     return a[t];
 }
-void disp()
-{
-    for (int i = t ; i >= 0; i--)
-        cout << a[i] <<" ";
-}
+
 bool isEmpty()
 {
     if(t==-1)
     return 1;
     return 0;
+}
+void disp()
+{
+    if(isEmpty()){
+    cout<<"\nStack Empty";
+    return;
+    }
+    cout<<"\nStack is: ";
+    for (int i = t ; i >= 0; i--)
+        cout << a[i] <<" ";
 }
 void insbot(int n)
 {
@@ -36,11 +42,19 @@ void insbot(int n)
     insbot(n);
     ins(a);
 }
+void rev()
+{
+    if(isEmpty())return;
+    int t=pop();
+     rev();
+    insbot(t);
+}
 main()
 {
     ins(1);
     ins(5);
     ins(3);
-    insbot(8);
+    disp();
+    rev();
     disp();
 }
