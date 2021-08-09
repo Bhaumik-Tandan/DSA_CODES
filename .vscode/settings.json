@@ -1,8 +1,11 @@
 {
     "files.associations": {
+        "*.sql": "sql",
         "*.py": "python",
         "map": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }

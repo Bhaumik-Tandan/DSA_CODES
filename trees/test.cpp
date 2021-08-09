@@ -1,9 +1,16 @@
 #include <iostream>
 #include <vector>
+#include<map>
+#include<queue>
 using namespace std;
 
 main()
 {
-    vector<int> a;
-    a[5]=4;
+   bool* v=new bool [4]();
+   queue<int> q;
+   q.push(3);
+   q.push(4);
+   q.pop();
+   cout<<q.front();
+
 }
