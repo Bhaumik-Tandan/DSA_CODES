@@ -9,10 +9,12 @@ bool isemp()
     return 1;
     return 0;
 }
+
 void enqueue(int n)
 {
     a[++r] = n;
 }
+
 int dequeue()
 {
     return a[f++];
@@ -23,6 +25,7 @@ void disp()
     for(int i=f;i<=r;i++)
     cout<<a[i]<<" ";
 }
+
 void menu()
 {
     cout<<"\n1)Enqueue\n2)Dequeue\n3)Display whole Queue\n4)Exit\nEnter your choice: ";
