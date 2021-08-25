@@ -1,8 +1,15 @@
 {
     "files.associations": {
+        "*.sql": "sql",
         "*.py": "python",
         "map": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "utility": "cpp"
     }
 }
