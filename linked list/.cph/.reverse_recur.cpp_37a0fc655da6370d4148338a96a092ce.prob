@@ -1,1 +1,0 @@
-{"name":"Local: reverse_recur","url":"c:\\Users\\bhaum\\OneDrive\\Desktop\\DSA CODES\\linked list\\reverse_recur.cpp","tests":[{"id":1627258161794,"input":"5\n1 2 3 4 5","output":"5 4 3 2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\bhaum\\OneDrive\\Desktop\\DSA CODES\\linked list\\reverse_recur.cpp","group":"local","local":true}
