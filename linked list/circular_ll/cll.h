@@ -41,7 +41,7 @@ void disp()
     }
     while(t!=l);
     
-    printf("---\n|");
+    printf("--\n|");
     for(int j=0;j<i*3+2;j++)
     printf("_");
     printf("|");
@@ -51,7 +51,7 @@ void disp()
 void takeinput()
 {
     int n;
-    printf("\nEnter the number of elemnts: ");
+    printf("\nEnter the number of elements: ");
     scanf("%d",&n);
     printf("Enter the elements: ");
 

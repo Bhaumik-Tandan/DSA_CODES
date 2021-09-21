@@ -31,6 +31,6 @@ main()
 {
     takeinput();
     distance();
-    printf("\nThe linked list is:-")
+    printf("\nThe linked list is:-");
     disp();
 }
