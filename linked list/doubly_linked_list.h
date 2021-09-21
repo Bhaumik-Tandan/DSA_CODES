@@ -48,18 +48,18 @@ ins_f(int n)
 
 void disp(int type)//0 denote ele 1 denote address
 {
-    printf("\n");
+    printf("\n%s<-",0);
     struct node *t = h;
     while (t)
     {
         if(type)
-        printf("%d->",t);
+        printf("%d<->",t);
         else
-        printf("%d->",t->d);
+        printf("%d<->",t->d);
         t = t->n;
     }
 
-    printf("%s",t);
+    printf("\b\b\b->%s",t);
 }
 
 ins_p(int n,int po)
