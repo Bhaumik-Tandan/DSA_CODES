@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "in_it.c"
 #include "ins.c"
+#include "int_to_bin.c"
 main()
 {
     in_it();
@@ -11,9 +12,19 @@ main()
 
     for(int i=0;i<n;i++)
     {
-        printf("\nEnter the element to be inserted: ");
+        printf("Enter the element to be inserted: ");
         int x;
         scanf("%d",&x);
         ins(x);
+    }
+
+    for(int i=0;i<global_depth;i++)
+    {
+        printf("%s: ",int_to_bin(directory[i]));
+        for(int j=0;j<bucket_size;j++)
+        {
+            printf("%d ",directory[i][j]);
+        }
+
     }
 }
