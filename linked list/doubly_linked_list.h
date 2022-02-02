@@ -117,3 +117,56 @@ void takeinput()
         ins_r(t);
     }
 }
+
+menu()
+{
+    int choice;
+    printf("\n1)Create new linked list\n2)Insert at the beginning\n3)Insert at the end\n4)Insert at a given position\n5)Delete at the beginning\n6)Delete at the end\n7)Delete at a given position\n8)Display\n9)Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d",&choice);
+    int e,pos;
+    switch (choice)
+    {
+        case 1:
+            create();
+            break;
+        case 2:
+            printf("Enter the element to be inserted: ");
+            scanf("%d",&e);
+            insert_beg(e);
+            break;
+        case 3:
+            printf("Enter the element to be inserted: ");
+            scanf("%d",&e);
+            insert_end(e);
+            break;
+        case 4:
+            printf("Enter the element to be inserted: ");
+            scanf("%d",&e);
+            printf("Enter the position: ");
+            scanf("%d",&pos);
+            insert_pos(e,pos);
+            break;
+        case 5:
+            delete_beg();
+            break;
+        case 6:
+            delete_end();
+            break;
+        case 7:
+            printf("Enter the position: ");
+            scanf("%d",&pos);
+            delete_pos(pos);
+            break;
+        case 8:
+            display();
+            break;
+        case 9:
+            exit(0);
+            break;
+        default:
+            printf("Invalid choice\n");
+            break;
+    }
+    menu();
+}
