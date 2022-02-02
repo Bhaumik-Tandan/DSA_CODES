@@ -1,4 +1,3 @@
-#include<stdio.h>
 struct node
 {
     int d;
@@ -73,9 +72,15 @@ ins_p(int n,int po)
         return;
     }
     struct node *p = h;
-    while (p->n && --po>0)
-        p = p->n;
-    p->n = t;
+    int co=0;
+    while(co<po-1)
+    {
+        p=p->n;
+        co++;
+    }
+    t->n=p->n;
+    p->n->p=t;
+    p->n=t;
     t->p=p;
 }
 
@@ -128,38 +133,38 @@ menu()
     switch (choice)
     {
         case 1:
-            create();
+            takeinput();
             break;
         case 2:
             printf("Enter the element to be inserted: ");
             scanf("%d",&e);
-            insert_beg(e);
+            ins_f(e);
             break;
         case 3:
             printf("Enter the element to be inserted: ");
             scanf("%d",&e);
-            insert_end(e);
+            ins_r(e);
             break;
         case 4:
             printf("Enter the element to be inserted: ");
             scanf("%d",&e);
             printf("Enter the position: ");
             scanf("%d",&pos);
-            insert_pos(e,pos);
+            ins_p(e,pos);
             break;
         case 5:
-            delete_beg();
+            del_f();
             break;
         case 6:
-            delete_end();
+            del_r();
             break;
         case 7:
             printf("Enter the position: ");
             scanf("%d",&pos);
-            delete_pos(pos);
+            del_p(pos);
             break;
         case 8:
-            display();
+            disp(0);
             break;
         case 9:
             exit(0);
